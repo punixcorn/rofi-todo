@@ -1,0 +1,5 @@
+#!/bin/bash 
+# edit ~/.config/rofi-todo to where you put this folder 
+rofi -modi todo:~/.config/rofi-todo/rofi-todo.sh -theme ~/.config/rofi-todo/todo.rasi -show todo
+
+

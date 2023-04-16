@@ -2,42 +2,57 @@
 
 Minimal todo client for the [rofi](https://github.com/DaveDavenport/rofi) launcher.
 
-This project is a fork of: http://bijanebrahimi.github.io/blog/rofi-todo.html
+This project is a fork of: [claudiodangelis/rofi-todo](https://claudiodangelis/rofi-todo)
 
-![todo](screenshots/todos.png)
+But with a **theme** 
 
-
+![todo](.screenshots/themed.png)
 
 # Installation
 
-## i3wm
+- clone repo to `~/.config/`
+- Font used is located in `~/.config/rofi-todo/dependencies/fonts/`
+    - to install move the fonts to `/usr/local/fonts/` and run `fc-cache -fv`
+- Call the `launcher`  script 
 
-Add this line to i3 config file. Change `Mod1+P` to the shortcut you want to invoke rofi-todo.sh with.
+
+## Example 
+
+### i3wm
+
+Add this line to i3 config file. Change `Mod1+P` to the shortcut you want to invoke `launcher` with
 
 ```
-bindsym Mod1+P exec rofi -modi TODO:/path/to/rofi-todo/rofi-todo.sh -show TODO
+bindsym Mod1+P exec ~/.config/rofi-todo/launcher
 ```
 
+### bspwm 
+Add to sxhkdrc 
+```
+super + T
+    sh ~/.config/rofi-todo/launcher
+```
 
 # Usage
 
 ## Add TODOs
 
-To add a new todo just start the line with a `+` sign, then press Enter, for example:
-
-![Add](screenshots/add-todo.png)
+> To add a new todo just start the line with a `+` sign, with no `white space` before it, then press Enter, for example:
 
 
-You will see:
+![Add](.screenshots/add-todo1.png)
 
-![added](screenshots/added-todo.png)
+
+> You will see:
+
+![added](.screenshots/todo-added1.png)
 
 
 ## Search TODOs
 
-To search through todos just start typing 
+> To search through todos just start typing 
 
-![search](screenshots/search-todo.png)
+![search](.screenshots/search-todo1.png)
 
 ## Mark TODOs as done
 
